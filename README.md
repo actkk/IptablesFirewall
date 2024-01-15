@@ -1,4 +1,4 @@
-## Iptables With Firewall
+## Iptables Firewall
 This project is a Intern project you can find more information at :
 https://github.com/fatihusta/intern-projects/tree/main/create-an-iptables-firewall
 
