@@ -206,7 +206,8 @@ listing.sh lists all namespaces and veths connected to the firewall. To run this
 * https://wiki.archlinux.org/title/simple_stateful_firewall
 * https://www.ibm.com/docs/en/i/7.2?topic=translation-masquerade-hide-nat
 * http://belgeler.gen.tr/howto/iptables-usage_nat.html
-It's always good to read man pages
+
+ It's always good to read man pages
 
 * https://man7.org/linux/man-pages/man7/network_namespaces.7.html
 * https://man7.org/linux/man-pages/man8/iptables.8.html
