@@ -74,9 +74,10 @@ sudo ip netns exec firewall iptables --policy FORWARD DROP
 sudo ip netns exec firewall iptables -A INPUT -p icmp -s 192.0.2.66/32 -i vfc2 -j ACCEPT
 
 #tcp
-sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.0/26 -d 192.0.2.192/26 -j ACCEPT
-sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.64/26 -d 192.0.2.192/26 -j ACCEPT
-sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.128/26 -d 192.0.2.192/26 -j ACCEPT
+#sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.0/26 -d 192.0.2.192/26 -j ACCEPT
+#sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.64/26 -d 192.0.2.192/26 -j ACCEPT
+#sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.128/26 -d 192.0.2.192/26 -j ACCEPT
+sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.0/24 -d 192.0.2.192/26 -j ACCEPT
 
 
 # Block ping from client1,

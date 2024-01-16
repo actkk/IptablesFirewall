@@ -152,9 +152,7 @@ Allow ping from client2
     sudo ip netns exec firewall iptables -A INPUT -p icmp -s 192.0.2.66/32 -i vfc2 -j ACCEPT
 Tcp
 
-    sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.0/26 -d 192.0.2.192/26 -j ACCEPT
-    sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.64/26 -d 192.0.2.192/26 -j ACCEPT
-    sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.128/26 -d 192.0.2.192/26 -j ACCEPT
+    sudo ip netns exec firewall iptables -I FORWARD -p tcp --dport 80 -s 192.0.2.0/24 -d 192.0.2.192/26 -j ACCEPT
 
 Block ping from client1
 
@@ -207,7 +205,7 @@ listing.sh lists all namespaces and veths connected to the firewall. To run this
 * https://www.ibm.com/docs/en/i/7.2?topic=translation-masquerade-hide-nat
 * http://belgeler.gen.tr/howto/iptables-usage_nat.html
 
- It's always good to read man pages
+It's always good to read man pages
 
 * https://man7.org/linux/man-pages/man7/network_namespaces.7.html
 * https://man7.org/linux/man-pages/man8/iptables.8.html
